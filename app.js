@@ -2,17 +2,19 @@
 
 // [START gae_node_request_example]
 const express = require('express');
+var cors = require('cors')
 
 const app = express();
 
-app.get('/', (req, res) => {
+app.use(cors());
+
+app.get('/', cors(), (req, res) => {
   var letters = '0123456789ABCDEF';
   var color = '#';
   for (var i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
-  res.setHeader('Content-Type', 'application/json');
-  res.status(200).send({ color: color}).end();
+  res.json({ color: color});
 });
 
 // Start the server
