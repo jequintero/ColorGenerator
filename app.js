@@ -3,7 +3,7 @@ const express = require('express');
 
 const app = express();
 
-app.use();
+app.use(cors());
 
 app.get('/', cors(), (req, res) => {
   var letters = '0123456789ABCDEF';
