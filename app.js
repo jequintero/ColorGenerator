@@ -11,6 +11,8 @@ app.get('/', cors(), (req, res) => {
   for (var i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
+  res.set('Access-Control-Allow-Origin', "*");
+  res.set('Access-Control-Allow-Methods', 'GET, POST');
   res.json({ color: color});
 });
 
