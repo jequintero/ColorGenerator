@@ -1,11 +1,8 @@
 'use strict';
 const express = require('express');
-
 const app = express();
 
-app.use(cors());
-
-app.get('/', cors(), (req, res) => {
+app.get('/', (req, res) => {
   var letters = '0123456789ABCDEF';
   var color = '#';
   for (var i = 0; i < 6; i++) {
