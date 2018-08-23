@@ -1,12 +1,9 @@
 'use strict';
-
-// [START gae_node_request_example]
 const express = require('express');
-var cors = require('cors')
 
 const app = express();
 
-app.use(cors());
+app.use();
 
 app.get('/', cors(), (req, res) => {
   var letters = '0123456789ABCDEF';
@@ -23,4 +20,3 @@ app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`);
   console.log('Press Ctrl+C to quit.');
 });
-// [END gae_node_request_example]
