@@ -2,7 +2,8 @@
 runtime: nodejs8
 handlers:
 - url: /
-  script: auto
+  script: app.js
+  secure: always
   http_headers:
     Access-Control-Allow-Origin: https://colores-f7d6b.firebaseapp.com
 # [END app_yaml]
